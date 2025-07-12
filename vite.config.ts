@@ -18,10 +18,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
-       '/api': {
+      '/api': {
         target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false
-    },
-  },
+      } // Added missing closing brace for proxy object
+    }, // Added missing closing brace for server object
+  }, // Added missing closing brace for defineConfig object
 });
